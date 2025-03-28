@@ -13,7 +13,8 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 70px;
-    font-size: 13px;
+    font-size: 10px;
+    animation: rgbFlash 3s infinite alternate;
 }
 
 .discord{
@@ -580,5 +581,14 @@ input:focus{
     100%{
         rotate: 360deg;
     }
+    
+    @keyframes rgbFlash {
+    0%   { background-color: #ff0000; color: white; } 
+    20%  { background-color: #ff8000; color: black; } 
+    40%  { background-color: #ffff00; color: black; } 
+    60%  { background-color: #00ff00; color: black; } 
+    80%  { background-color: #0000ff; color: white; }
+    100% { background-color: #8000ff; color: white; } 
+}
 
 }
