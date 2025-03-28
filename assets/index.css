@@ -6,7 +6,7 @@
 }
 
 .logo_text {
-    display: inline-block; /* Kluczowe - zawęża do rozmiaru tekstu */
+    display: inline-block;
     padding: 8px 16px;
     font-weight: bold;
     font-size: 30px;
@@ -16,9 +16,11 @@
     position: relative;
     line-height: 1.2;
     text-shadow: 0 0 5px rgba(0,0,0,0.3);
+    animation: rotate 8s linear infinite; /* Dodana animacja obrotu */
+    transform-origin: center center; /* Punkt obrotu na środku */
 }
 
-/* Kolorowe tło TYLKO za tekstem */
+/* Kolorowe tło */
 .logo_text::before {
     content: '';
     position: absolute;
@@ -35,7 +37,7 @@
     border-radius: 8px;
 }
 
-/* Efekt poświaty TYLKO wokół tekstu */
+/* Efekt poświaty */
 .logo_text::after {
     content: '';
     position: absolute;
@@ -49,11 +51,19 @@
     opacity: 0.8;
 }
 
+/* Animacja obrotu */
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Animacja gradientu */
 @keyframes rainbow {
     0% { background-position: 0% 50%; }
     100% { background-position: 100% 50%; }
 }
 
+/* Animacja poświaty */
 @keyframes glow {
     0% {
         box-shadow: 0 0 5px rgba(255,0,0,0.7),
