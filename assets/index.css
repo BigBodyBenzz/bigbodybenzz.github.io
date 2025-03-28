@@ -6,67 +6,64 @@
 }
 
 .logo_text {
-    display: inline-block;
+    display: inline-block; /* Zmieniamy na inline-block */
     padding: 10px 20px;
-    border-radius: 10px;
     font-weight: bold;
     font-size: 30px;
     color: white;
-    margin-top: 40px;
+    margin: 40px 0 10px;
     text-align: center;
-    margin-bottom: -10px;
-    background: linear-gradient(90deg, #ff0000, #ff8000, #ffff00, #00ff00, #0000ff, #8000ff);
-    background-size: 400% 400%;
-    animation: 
-        rainbow 5s ease infinite, 
-        glow 2s ease-in-out infinite alternate;
-    box-shadow: 
-        0 0 10px rgba(255,255,255,0.7),
-        0 0 20px rgba(255,0,0,0.6),
-        0 0 30px rgba(0,255,0,0.4),
-        0 0 40px rgba(0,0,255,0.3);
-    text-shadow: 0 0 5px rgba(255,255,255,0.9);
     position: relative;
-    overflow: hidden;
 }
 
 .logo_text::before {
     content: '';
     position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(
-        to bottom right,
-        rgba(255,255,255,0.3),
-        rgba(255,255,255,0)
-    );
-    transform: rotate(30deg);
-    animation: shine 3s infinite;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ff0000, #ff8000, #ffff00, #00ff00, #0000ff, #8000ff);
+    background-size: 400% 400%;
+    animation: rainbow 5s linear infinite;
     z-index: -1;
+}
+
+.logo_text::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 12px;
+    background: transparent;
+    box-shadow: 0 0 15px rgba(255,255,255,0.7),
+                0 0 25px rgba(255,0,0,0.6),
+                0 0 35px rgba(0,255,0,0.4),
+                0 0 45px rgba(0,0,255,0.3);
+    animation: glow 2s ease-in-out infinite alternate;
+    z-index: -2;
 }
 
 @keyframes rainbow {
     0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
 }
 
 @keyframes glow {
     from {
-        box-shadow: 
-            0 0 10px rgba(255,255,255,0.7),
-            0 0 20px rgba(255,0,0,0.6),
-            0 0 30px rgba(0,255,0,0.4),
-            0 0 40px rgba(0,0,255,0.3);
+        box-shadow: 0 0 10px rgba(255,255,255,0.7),
+                    0 0 20px rgba(255,0,0,0.6),
+                    0 0 30px rgba(0,255,0,0.4),
+                    0 0 40px rgba(0,0,255,0.3);
     }
     to {
-        box-shadow: 
-            0 0 15px rgba(255,255,255,0.9),
-            0 0 25px rgba(255,0,0,0.8),
-            0 0 35px rgba(0,255,0,0.6),
-            0 0 45px rgba(0,0,255,0.5);
+        box-shadow: 0 0 15px rgba(255,255,255,0.9),
+                    0 0 25px rgba(255,0,0,0.8),
+                    0 0 35px rgba(0,255,0,0.6),
+                    0 0 45px rgba(0,0,255,0.5);
     }
 }
 
