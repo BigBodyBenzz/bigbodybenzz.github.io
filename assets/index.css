@@ -22,18 +22,19 @@
 
 
 }
-.warning{
-    width: 90%;
-     position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 70px;
-    font-size: 13px;
+.warning {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+  text-align: center;
 }
 
 .discord{
