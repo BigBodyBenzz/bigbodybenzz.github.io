@@ -15,6 +15,23 @@
     margin-bottom: 70px;
     font-size: 10px;
     animation: rgbFlash 3s infinite alternate;
+    margin-top: -40px; 
+    margin-bottom: 30px; 
+}
+
+.logo_text {
+    background: linear-gradient(90deg, #ff0000, #ff8000, #ffff00, #00ff00, #0000ff, #8000ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 400% 400%;
+    animation: rainbow 5s ease infinite;
+}
+
+@keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .discord{
