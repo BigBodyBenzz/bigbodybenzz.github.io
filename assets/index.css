@@ -15,25 +15,46 @@
     margin-bottom: 70px;
     font-size: 10px;
     animation: rgbFlash 3s infinite alternate;
-    margin-top: -40px; 
-    margin-bottom: 30px; 
 }
 
 .logo_text {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 30px;
+    color: white; /* Kolor tekstu - biały dla lepszej widoczności */
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: -10px;
     background: linear-gradient(90deg, #ff0000, #ff8000, #ffff00, #00ff00, #0000ff, #8000ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
     background-size: 400% 400%;
     animation: rainbow 5s ease infinite;
+    box-shadow: 0 0 15px currentColor; /* Dodaje poświatę w aktualnym kolorze */
 }
 
 @keyframes rainbow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% { 
+        background-position: 0% 50%;
+        box-shadow: 0 0 15px #ff0000; /* Dopasowuje poświatę do koloru */
+    }
+    20% { 
+        box-shadow: 0 0 15px #ff8000;
+    }
+    40% { 
+        box-shadow: 0 0 15px #ffff00;
+    }
+    60% { 
+        box-shadow: 0 0 15px #00ff00;
+    }
+    80% { 
+        box-shadow: 0 0 15px #0000ff;
+    }
+    100% { 
+        background-position: 100% 50%;
+        box-shadow: 0 0 15px #8000ff;
+    }
 }
-
 .discord{
     margin-bottom: 50px;
     cursor: pointer;
