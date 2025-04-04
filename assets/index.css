@@ -35,6 +35,24 @@
     opacity: 0.5;
 }
 
+.logo_text {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--main-color);
+    margin-top: 40px;
+    margin-bottom: -10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.logo_text:hover {
+    color: #0d93ec;
+    transform: scale(1.05);
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
 .inner_grid{
     position: absolute;
     top: 0;
