@@ -56,6 +56,51 @@ input.addEventListener("input", () => {
 function delay(time, length) {
     return new Promise(resolve => setTimeout(resolve, time));
 }
+document.addEventListener('DOMContentLoaded', function() {
+    const starsContainer = document.getElementById('stars-container');
+    
+    // Create stars
+    function createStars() {
+        // Clear existing stars
+        starsContainer.innerHTML = '';
+        
+        // Number of stars based on screen size
+        const starCount = Math.floor((window.innerWidth * window.innerHeight) / 1000);
+        
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            
+            // Random position
+            const left = Math.floor(Math.random() * window.innerWidth);
+            const top = Math.floor(Math.random() * window.innerHeight);
+            
+            // Random size
+            const size = Math.random() * 2;
+            
+            // Random animation duration
+            const duration = 2 + Math.random() * 8;
+            
+            // Random animation delay
+            const delay = Math.random() * 10;
+            
+            star.style.left = `${left}px`;
+            star.style.top = `${top}px`;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.animationDuration = `${duration}s`;
+            star.style.animationDelay = `${delay}s`;
+            
+            starsContainer.appendChild(star);
+        }
+    }
+    
+    // Initial creation
+    createStars();
+    
+    // Recreate on resize
+    window.addEventListener('resize', createStars);
+});
 
 eye.addEventListener('click', () => {
     var classlist = eye.classList;
