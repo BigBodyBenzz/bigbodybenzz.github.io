@@ -14,7 +14,7 @@
 }
 
 body {
-  background-image: url('https://imgur.com/a/GpevoLR.gif');
+  background-image: url('https://i.imgur.com/MnJGcH0.gif');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -26,25 +26,7 @@ body {
   scroll-behavior: smooth;
 }
 
-.logo_text,
-.guide_title,
-.top_info,
-.selector_text,
-.selector_option,
-.subtext,
-.upload_text,
-.placeholder,
-.input,
-.discord_text {
-  color: var(--main-color);
-  opacity: 1;
-}
-
-input::placeholder,
-.date_input::placeholder {
-  color: var(--main-color);
-}
-
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 5px;
   background-color: var(--bg-black);
@@ -55,6 +37,7 @@ input::placeholder,
   border-radius: 25px;
 }
 
+/* Logo */
 .logo {
   width: 100px;
   margin: 80px auto 0;
@@ -71,6 +54,7 @@ input::placeholder,
   letter-spacing: 2px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   transition: 0.3s ease-in-out;
+  color: var(--main-color);
 }
 
 .logo_text:hover {
@@ -84,8 +68,10 @@ input::placeholder,
   font-weight: 600;
   width: 90%;
   margin: 80px auto 0;
+  color: var(--main-color);
 }
 
+/* Input Fields */
 .input_holder {
   width: 90%;
   margin: 0 auto 40px;
@@ -103,6 +89,12 @@ input::placeholder,
   background: transparent;
 }
 
+.input::placeholder,
+.date_input::placeholder {
+  color: var(--main-color);
+  opacity: 0.5;
+}
+
 .placeholder {
   font-size: 15px;
   font-weight: bold;
@@ -110,9 +102,10 @@ input::placeholder,
   top: 50%;
   left: 2px;
   transform: translateY(-50%);
-  opacity: 0.5;
   pointer-events: none;
   transition: 0.2s;
+  color: var(--main-color);
+  opacity: 0.5;
 }
 
 .input:focus ~ .placeholder,
@@ -121,6 +114,7 @@ input::placeholder,
   font-size: 14px;
 }
 
+/* Errors */
 .error {
   color: var(--error-color);
   font-size: 15px;
@@ -143,6 +137,7 @@ input::placeholder,
   color: var(--error-color);
 }
 
+/* Classic input */
 .classic_input {
   background: transparent;
   border: none;
@@ -159,6 +154,7 @@ input:focus {
   outline: none;
 }
 
+/* Button */
 .go {
   width: 90%;
   height: 50px;
@@ -178,6 +174,7 @@ input:focus {
   opacity: 0.5;
 }
 
+/* Discord & Upload Box */
 .discord,
 .guide_holder,
 .upload {
@@ -199,12 +196,6 @@ input:focus {
   justify-content: center;
 }
 
-.discord:hover,
-.guide_holder:hover,
-.upload:hover {
-  opacity: 0.5;
-}
-
 .discord_text {
   font-size: 20px;
   font-weight: 600;
@@ -217,11 +208,19 @@ input:focus {
   margin-right: 10px;
 }
 
+.discord:hover,
+.guide_holder:hover,
+.upload:hover {
+  opacity: 0.5;
+}
+
+/* Guide Section */
 .guide_title {
   font-size: 20px;
   font-weight: 600;
   margin-left: 20px;
   line-height: 50px;
+  color: var(--main-color);
 }
 
 .arrow {
@@ -232,14 +231,22 @@ input:focus {
   transition: 0.2s;
 }
 
-.unfolded {
+.guide_content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  padding: 0 20px;
+}
+
+.guide_holder.unfolded .guide_content {
   max-height: 700px;
 }
 
-.unfolded .arrow {
+.guide_holder.unfolded .arrow {
   rotate: 90deg;
 }
 
+/* Date input */
 .date_grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -258,6 +265,7 @@ input:focus {
   font-weight: bold;
   font-size: 15px;
   color: var(--border-color);
+  background: transparent;
 }
 
 .date_input::placeholder {
@@ -266,6 +274,7 @@ input:focus {
   text-align: center;
 }
 
+/* Upload Section */
 .upload {
   height: 200px;
   margin-top: 20px;
