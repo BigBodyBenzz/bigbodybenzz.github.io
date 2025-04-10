@@ -5,12 +5,14 @@
     --error-color: rgb(206, 29, 29);
 }
 body {
+
+body {
   background-image: url('images/stras.gif');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-    color: white;
+  background-color: black; 
 }
 
 .logo_text,
