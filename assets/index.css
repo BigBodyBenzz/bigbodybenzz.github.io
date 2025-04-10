@@ -343,14 +343,14 @@ input::-webkit-inner-spin-button {
     font-family: "Poppins", sans-serif;
 }
 
-body{body {
+body {
   background-image: url('https://imgur.com/a/GpevoLR.gif');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-color: black; 
-
+}
 
 .go{
     width: 90%;
