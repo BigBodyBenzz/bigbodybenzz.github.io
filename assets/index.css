@@ -4,7 +4,33 @@
     --main-color: rgb(41, 41, 41);
     --error-color: rgb(206, 29, 29);
 }
+body {
+  background-image: url('images/stras.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+    color: white;
+}
 
+.logo_text,
+.guide_title,
+.top_info,
+.selector_text,
+.selector_option,
+.subtext,
+.upload_text,
+.placeholder,
+.input,
+.discord_text {
+  color: white !important;
+  opacity: 1 !important;
+}
+
+input::placeholder,
+.date_input::placeholder {
+  color: white !important;
+}
 /**Styling**/
 
 .warning{
